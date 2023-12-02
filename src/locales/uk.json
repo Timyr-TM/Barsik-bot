@@ -1,0 +1,7 @@
+{
+    "slash_command.help": "Виводить інформацію про команди бота",
+    "slash_command.help.options.command": "команда бота",
+    "slash_command.help.main_embed.title": "Інформація про команду: {command}",
+    "slash_command.help.main_embed.options": "Налаштування:",
+    "slash_command.help.main_embed.options.required": "обов'язковий"
+}

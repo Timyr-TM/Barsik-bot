@@ -1,0 +1,15 @@
+{
+    "help": {
+        "name": "help",
+        "description": "slash_command.help",
+        "link": null,
+        "type": "slash-command",
+        "options": [
+            {
+                "name": "command",
+                "description": "slash_command.help.options.command",
+                "required": true
+            }
+        ]
+    }
+}

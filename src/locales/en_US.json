@@ -1,0 +1,7 @@
+{
+    "slash_command.help": "Displays information about bot commands",
+    "slash_command.help.options.command": "bot command",
+    "slash_command.help.main_embed.title": "Command information: {command}",
+    "slash_command.help.main_embed.options": "Settings:",
+    "slash_command.help.main_embed.options.required": "required"
+}
