@@ -153,6 +153,6 @@ dmypy.json
 cython_debug/
 
 .idea/
-bot-config.toml
 poetry.lock
 src/logs/*
+config.toml

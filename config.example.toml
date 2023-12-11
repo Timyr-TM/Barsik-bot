@@ -1,0 +1,6 @@
+# Example configuration
+# Rename "config.example.toml" to "config.toml" and provide parameters
+
+[bot.config]
+token = "..."       # discord bot token             (required)
+owners = []         # list of Discord users' IDs

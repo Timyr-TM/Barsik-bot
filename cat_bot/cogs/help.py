@@ -46,9 +46,11 @@ class HelpCommand(commands.Cog):
         ),
     ) -> NoReturn:
         embed = disnake.Embed(
-            title=BotLocal("slash_command.help.main_embed.title")
-            .get(inter.locale)
-            .format(command=f"`/{command.get('name')}`"),
+            title=(
+                BotLocal("slash_command.help.main_embed.title")
+                .get(inter.locale)
+                .format(command=f"`/{command.get('name')}`")
+            ),
             url=command.get("link"),
             color=disnake.Color.blurple(),
             description=(
@@ -57,28 +59,35 @@ class HelpCommand(commands.Cog):
                 else None
             ),
         )
-        if command.get("options") and len(command.get("options")) > 0:
+        if command.get("options"):
             options = ""
-            for data in command.get("options"):
+            for option in command.get("options"):
                 required: str = (
                     f" *({BotLocal('slash_command.help.main_embed.options.required').get(inter.locale)})*"
-                    if data.get("required")
+                    if option.get("required")
                     else ""
                 )
                 options += (
-                    f"- **{data.get('name')}**{required}\n"
-                    f" {BotLocal(data.get('description')).get(inter.locale)}\n"
+                    f"- **{option.get('name')}**{required}\n"
+                    f" {BotLocal(option.get('description')).get(inter.locale)}\n"
                 )
             embed.add_field(
-                name=BotLocal("slash_command.help.main_embed.options").get(
-                    inter.locale
-                ),
+                name=BotLocal('slash_command.help.main_embed.options').get(inter.locale),
                 value=options,
+                inline = False
             )
-
-        await inter.send(embeds=[embed])
-        return
-
+        
+        if command.get("permissions"):
+            permissions = ""
+            for permission in command.get("permissions"):
+                local = BotLocal(f"permission.{permission}").get(inter.locale)
+                permissions += f"- {local}\n"
+            embed.add_field(
+                name = BotLocal('slash_command.help.main_embed.permissions').get(inter.locale),
+                value = permissions,
+                inline = False
+            )
+        await inter.send(embeds=[embed], ephemeral = True)
 
 def setup(bot: commands.Bot) -> NoReturn:
     bot.add_cog(HelpCommand(bot))

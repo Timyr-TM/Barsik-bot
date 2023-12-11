@@ -4,13 +4,13 @@ version = "0.1.0"
 description = ""
 authors = ["TiymyrTM"]
 readme = "README.md"
+repository = "https://github.com/Timyr-TM/Cat-Bot"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "3.11.*"
 disnake = "^2.9.1"
 loguru = "^0.7.2"
 black = "^23.11.0"
-toml = "^0.10.2"
 
 [tool.poetry.scripts]
 bot = "cat_bot.bot:main"
