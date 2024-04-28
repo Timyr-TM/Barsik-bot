@@ -155,4 +155,4 @@ cython_debug/
 .idea/
 poetry.lock
 src/logs/*
-config.toml
+config.json

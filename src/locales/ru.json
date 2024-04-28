@@ -1,24 +1,17 @@
 {
-    "slash_command.help": "Выводит информацию о командах бота",
-    "slash_command.help.options.command": "комманда бота",
-    "slash_command.help.main_embed.title": "Информация о команде: {command}",
-    "slash_command.help.main_embed.options": "Настройки:",
-    "slash_command.help.main_embed.permissions": "Права на использование:",
-    "slash_command.help.main_embed.options.required": "обязателен",
+    "slash_command.help": "Выводит информацию о выбранной документации",
+    "slash_command.help.option.docs": "Документация о которой вы хотите вывести информацию",
 
-    "slash_command.clear": "Очищает определённое количество сообщений",
-    "slash_command.clear.options.count": "Количество удаляемых сообщений",
-    "slash_command.clear.options.channel": "Канал в котором будут удалены сообщения",
-    "slash_command.clear.options.member": "Пользователь которого будут удалены сообщения",
-    "slash_command.clear.embed_cleaning": "Очистка сообщений...",
-    "slash_command.clear.final_embed": "Сообщения очищены",
-    "slash_command.clear.final_embed.description.messages": "Удалено",
-    "slash_command.clear.final_embed.description.channel": "В канале",
-    "slash_command.clear.final_embed.description.administrator": "Администратор",
-    "slash_command.clear.final_embed.description.member": "Пользователя",
 
-    "error.slash_command": "При использовании /slash команды произошла ошибка",
-    "error.bot_missing_permissions": "недостаточно прав у бота:",
+    "embed.docs.slash-command.title": "Информация о команде: {command}",
+    "embed.docs.slash-command.options": "Настройки:",
+    "embed.docs.slash-command.permissions": "Разрешения на использование:",
+
+
+    "error.title": "Ошибка",
+    "docs_not_found": "Документация по запросу `{docs}` не найдена!",
+    "error.unknown": "При использовании взаимодействия произошла неизвестная ошибка!",
+
 
     "permission.add_reactions": "Добавлять реакции",
     "permission.administrator": "Администратор",
